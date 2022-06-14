@@ -2,4 +2,7 @@
     <string name="app_name">QuizUp</string>
     <string name="quizup">QuizUp</string>
     <string name="play">PLAY</string>
+    <string name="enter_your_name_bellow">Enter your name bellow.</string>
+    <string name="welcome_to_quizup">Welcome to QuizUp</string>
+    <string name="name">Name</string>
 </resources>
