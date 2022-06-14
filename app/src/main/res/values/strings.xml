@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">QuizUp</string>
+    <string name="quizup">QuizUp</string>
+    <string name="play">PLAY</string>
 </resources>
