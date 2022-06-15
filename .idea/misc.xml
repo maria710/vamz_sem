@@ -5,8 +5,10 @@
       <map>
         <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.368" />
         <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.368" />
+        <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/layout/activity_categories.xml" value="0.3671875" />
         <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/layout/activity_login.xml" value="0.25239071038251365" />
         <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/layout/activity_main.xml" value="0.3671875" />
+        <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/layout/activity_questions.xml" value="0.3671875" />
         <entry key="..\:/Users/maria/Desktop/vamz/QuizUp/app/src/main/res/layout/activity_status.xml" value="0.25239071038251365" />
       </map>
     </option>
