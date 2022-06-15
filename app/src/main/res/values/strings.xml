@@ -5,4 +5,5 @@
     <string name="enter_your_name_bellow">Enter your name bellow.</string>
     <string name="welcome_to_quizup">Welcome to QuizUp</string>
     <string name="name">Name</string>
+    <string name="start">START</string>
 </resources>

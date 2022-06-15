@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="#D33232">
+    android:background="@color/app_theme">
 
 
     <androidx.cardview.widget.CardView
@@ -15,39 +15,61 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="40dp">
+            android:layout_margin="20dp">
+
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/welcome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/welcome_to_quizup"
                 android:textColor="@color/black"
-                android:textSize="60sp"
+                android:textSize="35sp"
                 android:gravity="center"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/enterName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/enter_your_name_bellow"
-                android:textSize="20sp"
+                android:textSize="15sp"
                 android:layout_marginTop="40dp"
                 android:gravity="center"
-                android:textColor="@color/black"/>
+                android:textColor="@color/light_grey"/>
 
-            <EditText
-                android:id="@+id/editTextPersonName"
-                android:layout_width="wrap_content"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:background="@color/black"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="@string/name"
-                android:textColor="@color/white"
-                android:textSize="50sp" />
+                android:layout_marginTop="20dp">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/nameOfPlayer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="@string/name"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/startButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:background="@color/purple_700"
+        android:text="@string/start"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="25sp">
+
+    </androidx.appcompat.widget.AppCompatButton>
 </LinearLayout>
