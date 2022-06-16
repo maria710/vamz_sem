@@ -23,6 +23,9 @@ class QuestionActivity : AppCompatActivity() {
 
     var question : TextView? = null
 
+    /**
+     * na zaklade kategoriie vytvorenie otazok a odpovedi
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question)
@@ -39,6 +42,13 @@ class QuestionActivity : AppCompatActivity() {
 
             when(extra) {
                 "history" -> listOfQuestion = Questions.getHistoryQuestions()
+                "technology" -> listOfQuestion = Questions.getTechnologyQuestions()
+                "nature" -> listOfQuestion = Questions.getNatureQuestions()
+                "films" -> listOfQuestion = Questions.getFilmsQuestions()
+                "androids" -> listOfQuestion = Questions.getAndroidQuestions()
+                "animals" -> listOfQuestion = Questions.getAnimalsQuestions()
+                "humanBody" -> listOfQuestion = Questions.getHumanBodyQuestions()
+                "geography" -> listOfQuestion = Questions.getGeographyQuestions()
         }
 
         progress!!.max = listOfQuestion!!.size
@@ -104,7 +114,7 @@ class QuestionActivity : AppCompatActivity() {
 
     private fun highLightAnswer() {
 
-        when(listOfQuestion!![progress!!.progress].correctAnswer) {
+        when(listOfQuestion!![numberOfActualAns].correctAnswer) {
             1-> setColorOfButtons(ans1!!, ans2!!, ans3!!, ans4!!)
             2-> setColorOfButtons(ans2!!, ans1!!, ans3!!, ans4!!)
             3-> setColorOfButtons(ans3!!, ans1!!, ans2!!, ans4!!)

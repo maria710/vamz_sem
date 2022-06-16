@@ -27,23 +27,10 @@
         android:onClick="goBackToCategories"
         android:text="Categories"
         android:textSize="15sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/buttonExit"
-        app:layout_constraintEnd_toStartOf="@+id/buttonExit"
-        app:layout_constraintStart_toStartOf="@+id/textFinish" />
-
-    <Button
-        android:id="@+id/buttonExit"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/purple_700"
-        android:onClick="exit"
-        android:text="Exit"
-        android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textFinish"
-        app:layout_constraintTop_toBottomOf="@+id/textFinish"
-        app:layout_constraintVertical_bias="0.784" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textFinish"
+        app:layout_constraintTop_toBottomOf="@+id/textFinish" />
 
     <TextView
         android:id="@+id/textViewScore"

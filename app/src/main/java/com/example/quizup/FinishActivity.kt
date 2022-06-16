@@ -17,13 +17,14 @@ class FinishActivity : AppCompatActivity() {
         textView.text = correct.toString()
     }
 
+    /**
+     * navrat do kategorii
+     */
+
     fun goBackToCategories(view: View) {
         val intend = Intent(this, CategoriesActivity::class.java)
         startActivity(intend)
         finish()
     }
 
-    fun exit(view: View) {
-        finish()
-    }
 }

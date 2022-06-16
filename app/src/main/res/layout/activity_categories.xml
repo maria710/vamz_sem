@@ -5,17 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-<!--    <androidx.appcompat.widget.Toolbar-->
-<!--        android:id="@+id/toolbar"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/app_theme"-->
-<!--        android:minHeight="?attr/actionBarSize"-->
-<!--        android:theme="?attr/actionBarTheme"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
-
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -35,7 +24,7 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
             android:onClick="history"
             android:text="@string/history"
             app:cornerRadius="20dp"
@@ -49,7 +38,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="technology"
             android:text="@string/technology"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +52,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="nature"
             android:text="@string/nature"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -75,7 +66,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="films"
             android:text="Films"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +80,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="androids"
             android:text="@string/android"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +94,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="animals"
             android:text="@string/animals"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -114,7 +108,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="humanBody"
             android:text="Human Body"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -127,7 +122,8 @@
             android:layout_marginStart="30dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
-            android:backgroundTint="@color/dark_red"
+            android:backgroundTint="@color/app_theme"
+            android:onClick="geography"
             android:text="Geography"
             app:cornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"

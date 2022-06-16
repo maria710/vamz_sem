@@ -14,6 +14,9 @@ class Login : AppCompatActivity() {
     private var nameOfPlayer: AppCompatEditText? = null
         get() {return field }
 
+    /**
+     * vytvorenie mena hraca a nasledne presunutie sa do kategorii
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

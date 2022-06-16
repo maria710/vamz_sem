@@ -8,6 +8,9 @@ import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
+    /**
+     * presunutie sa na login
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
