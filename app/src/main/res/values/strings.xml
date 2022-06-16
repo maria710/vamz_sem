@@ -6,4 +6,9 @@
     <string name="welcome_to_quizup">Welcome to QuizUp</string>
     <string name="name">Name</string>
     <string name="start">START</string>
+    <string name="history">History</string>
+    <string name="nature">Nature</string>
+    <string name="technology">Technology</string>
+    <string name="android">Android</string>
+    <string name="animals">Animals</string>
 </resources>

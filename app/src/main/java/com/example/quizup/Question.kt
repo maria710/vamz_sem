@@ -2,6 +2,7 @@ package com.example.quizup
 
 data class Question (
     val text: String,
+    //val category: Category,
     val answer1: String,
     val answer2: String,
     val answer3: String,
