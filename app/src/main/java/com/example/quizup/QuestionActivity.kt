@@ -1,5 +1,7 @@
 package com.example.quizup
 
+import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -9,8 +11,9 @@ import android.widget.TextView
 
 class QuestionActivity : AppCompatActivity() {
 
-    var progress: ProgressBar? = null
-    var numberOfCorrectAns: Int = 0
+    private var progress: ProgressBar? = null
+    private var numberOfCorrectAns: Int = 0
+    private var numberOfActualAns: Int = 0
     private var listOfQuestion: ArrayList<Question>? = null
 
     private var ans1: Button? = null
@@ -37,57 +40,66 @@ class QuestionActivity : AppCompatActivity() {
             when(extra) {
                 "history" -> listOfQuestion = Questions.getHistoryQuestions()
         }
+
+        progress!!.max = listOfQuestion!!.size
     }
 
     fun ans1(view: View) {
 
-        if (listOfQuestion!![progress!!.progress].correctAnswer == 1) {
+        if (listOfQuestion!![numberOfActualAns].correctAnswer == 1) {
             numberOfCorrectAns++
         }
-        increaseProgress()
         highLightAnswer()
     }
 
     fun ans2(view: View) {
-        if (listOfQuestion!![progress!!.progress].correctAnswer == 2) {
+        if (listOfQuestion!![numberOfActualAns].correctAnswer == 2) {
             numberOfCorrectAns++
         }
-        increaseProgress()
         highLightAnswer()
     }
 
     fun ans3(view: View) {
-        if (listOfQuestion!![progress!!.progress].correctAnswer == 3) {
+        if (listOfQuestion!![numberOfActualAns].correctAnswer == 3) {
             numberOfCorrectAns++
         }
-        increaseProgress()
         highLightAnswer()
     }
 
     fun ans4(view: View) {
-        if (listOfQuestion!![progress!!.progress].correctAnswer == 4) {
+        if (listOfQuestion!![numberOfActualAns].correctAnswer == 4) {
             numberOfCorrectAns++
         }
-        increaseProgress()
         highLightAnswer()
     }
 
     fun next(view: View) {
-        if (progress!!.progress == progress!!.max) {
-            //TODO intend
-        }
-        ans1!!.text = (listOfQuestion!![progress!!.progress].answer1)
-        ans2!!.text = (listOfQuestion!![progress!!.progress].answer2)
-        ans3!!.text = (listOfQuestion!![progress!!.progress].answer3)
-        ans4!!.text = (listOfQuestion!![progress!!.progress].answer4)
+        numberOfActualAns++
+        progress!!.progress = numberOfActualAns
 
+        if (numberOfActualAns == listOfQuestion!!.size) {
+            val intend = Intent(this, FinishActivity::class.java).apply {
+                putExtra("correct", numberOfCorrectAns)
+            }
+            startActivity(intend)
+            finish()
+        }
+
+        ans1!!.text = (listOfQuestion!![numberOfActualAns].answer1)
+        ans2!!.text = (listOfQuestion!![numberOfActualAns].answer2)
+        ans3!!.text = (listOfQuestion!![numberOfActualAns].answer3)
+        ans4!!.text = (listOfQuestion!![numberOfActualAns].answer4)
+
+        question!!.text = (listOfQuestion!![numberOfActualAns].text)
+
+        resetBColors()
     }
 
     private fun setColorOfButtons(correct: Button, false1: Button, false2: Button, false3: Button) {
-        correct.setBackgroundColor(1)
-        false1.setBackgroundColor(3)
-        false2.setBackgroundColor(3)
-        false3.setBackgroundColor(3)
+        correct.setBackgroundColor(Color.GREEN)
+        false1.setBackgroundColor(Color.RED)
+        false2.setBackgroundColor(Color.RED)
+        false3.setBackgroundColor(Color.RED)
     }
 
     private fun highLightAnswer() {
@@ -100,8 +112,11 @@ class QuestionActivity : AppCompatActivity() {
         }
     }
 
-    private fun increaseProgress() {
-        progress!!.progress = progress!!.progress + 1
+    private fun resetBColors() {
+        ans1!!.setBackgroundColor(Color.DKGRAY)
+        ans2!!.setBackgroundColor(Color.DKGRAY)
+        ans3!!.setBackgroundColor(Color.DKGRAY)
+        ans4!!.setBackgroundColor(Color.DKGRAY)
     }
 
 }
