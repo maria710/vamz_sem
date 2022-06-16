@@ -118,5 +118,4 @@ class QuestionActivity : AppCompatActivity() {
         ans3!!.setBackgroundColor(Color.DKGRAY)
         ans4!!.setBackgroundColor(Color.DKGRAY)
     }
-
 }

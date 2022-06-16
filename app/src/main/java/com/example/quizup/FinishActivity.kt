@@ -1,7 +1,9 @@
 package com.example.quizup
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 
 class FinishActivity : AppCompatActivity() {
@@ -13,5 +15,15 @@ class FinishActivity : AppCompatActivity() {
 
         val textView = findViewById<TextView>(R.id.textFinish)
         textView.text = correct.toString()
+    }
+
+    fun goBackToCategories(view: View) {
+        val intend = Intent(this, CategoriesActivity::class.java)
+        startActivity(intend)
+        finish()
+    }
+
+    fun exit(view: View) {
+        finish()
     }
 }
