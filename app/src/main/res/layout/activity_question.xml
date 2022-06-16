@@ -41,24 +41,28 @@
             android:id="@+id/ans1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ans1"
             android:text="Button" />
 
         <Button
             android:id="@+id/ans2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ans2"
             android:text="Button" />
 
         <Button
             android:id="@+id/ans3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ans3"
             android:text="Button" />
 
         <Button
             android:id="@+id/ans4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="ans4"
             android:text="Button" />
 
 
